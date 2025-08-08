@@ -1,0 +1,1154 @@
+<!-- [Full HTML code below - scroll to see all PMs, customers, and Why Choose SPACE? benefits] -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SPACE - Scaled Platform Advanced Cognitive Experience</title>
+  <style>
+    :root {
+      --primary: #ff006e;
+      --secondary: #8338ec;
+      --accent: #3a86ff;
+      --success: #06ffa5;
+      --warning: #ffbe0b;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0a0a0a;
+      color: white;
+      overflow-x: hidden;
+    }
+    .animated-bg {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      z-index: -1;
+      background: linear-gradient(135deg, #1a0d2e 0%, #16213e 20%, #0f3460 40%, #1a0d2e 60%, #16213e 80%, #0f3460 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 25s ease infinite;
+    }
+    .animated-bg::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 20% 80%, rgba(255, 0, 110, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(131, 56, 236, 0.06) 0%, transparent 50%);
+      animation: float 30s ease-in-out infinite;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes float {
+      0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.4; }
+      33% { transform: scale(1.05) rotate(60deg); opacity: 0.6; }
+      66% { transform: scale(0.95) rotate(120deg); opacity: 0.3; }
+    }
+    .particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+    .particle {
+      position: absolute;
+      width: 3px; height: 3px; background: rgba(255, 0, 110, 0.7);
+      border-radius: 50%;
+      animation: particleFloat 8s infinite linear;
+      box-shadow: 0 0 8px rgba(255, 0, 110, 0.5);
+    }
+    @keyframes particleFloat {
+      0% { transform: translateY(100vh) scale(0); opacity: 0; }
+      10% { opacity: 0.8; }
+      90% { opacity: 0.8; }
+      100% { transform: translateY(-100px) scale(1); opacity: 0; }
+    }
+    .navbar {
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(20px);
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%; top: 0; z-index: 1000;
+      border-bottom: 1px solid rgba(255, 0, 110, 0.2);
+      transition: all 0.3s ease;
+    }
+    .nav-content {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+    @keyframes logoColorCycle {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: #f8fafc;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+    }
+    .nav-links a:hover {
+      background: rgba(255, 0, 110, 0.15); color: #ff006e;
+      transform: translateY(-1px);
+    }
+    .l1-support-btn {
+  background: none;
+  border: none;
+  color: #f8fafc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.l1-support-btn:hover {
+  background: rgba(255, 0, 110, 0.15);
+  color: #ff006e;
+  transform: translateY(-1px);
+}
+    .hero {
+      padding: 120px 2rem 40px; text-align: center;
+      position: relative; min-height: 70vh; display: flex;
+      align-items: center; justify-content: center;
+    }
+    .hero-content {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 4.8rem; font-weight: 800; margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ff006e, #8338ec, #3a86ff, #06ffa5, #ffbe0b);
+      background-size: 300% 300%;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      animation: heroColorShift 2s ease infinite; letter-spacing: -1px;
+    }
+    @keyframes heroColorShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .hero-subtitle {
+      font-size: 1.6rem; margin-bottom: 2rem;
+      background: linear-gradient(90deg, #06ffa5, #ffbe0b);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      font-weight: 500; opacity: 0.95;
+    }
+    .hero-description {
+      font-size: 1.1rem; line-height: 1.7; margin-bottom: 3rem;
+      color: #f1f5f9; backdrop-filter: blur(15px);
+      background: rgba(0, 0, 0, 0.6);
+      padding: 2.5rem; border-radius: 16px;
+      border: 1px solid rgba(255, 0, 110, 0.2);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    .cta-button {
+      background: linear-gradient(135deg, #ff006e, #8338ec, #3a86ff);
+      background-size: 200% 200%;
+      border: none; padding: 18px 45px; border-radius: 12px; color: white;
+      font-size: 1.1rem; font-weight: 600; cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none; display: inline-block;
+      box-shadow: 0 12px 30px rgba(255, 0, 110, 0.4);
+    }
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(255, 0, 110, 0.5);
+    }
+    .section { padding: 100px 2rem; position: relative; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-title {
+      font-size: 3.2rem; text-align: center; margin-bottom: 4rem;
+      background: linear-gradient(135deg, #60a5fa, #34d399);
+      background-size: 200% 200%;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      animation: gradientShift 6s ease infinite;
+      font-weight: 700; position: relative;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute; bottom: -10px; left: 50%;
+      width: 80px; height: 3px;
+      background: linear-gradient(90deg, #ff006e, #3a86ff);
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+    .team-showcase {
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 20px;
+      padding: 3rem; backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 0, 110, 0.3); margin-bottom: 4rem;
+      transition: all 0.2s ease;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+    .team-image { width: 100%; height: 350px;
+      background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(131, 56, 236, 0.08));
+      border-radius: 16px; display: flex; align-items: center; justify-content: center;
+      margin-bottom: 2rem; position: relative; overflow: hidden;
+      border: 1px solid rgba(255, 0, 110, 0.3);
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem; margin: 4rem 0;
+    }
+    .benefit-card {
+      background: rgba(0, 0, 0, 0.7); border-radius: 20px; padding: 2.5rem; text-align: center;
+      backdrop-filter: blur(20px); border: 1px solid rgba(255, 0, 110, 0.2);
+      transition: all 0.2s ease; position: relative; overflow: hidden;
+      cursor: pointer; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    .benefit-card:hover {
+      border-color: rgba(255, 0, 110, 0.4);
+      background: rgba(0, 0, 0, 0.8);
+    }
+    .benefit-icon {
+      width: 85px; height: 85px;
+      background: linear-gradient(135deg, #ff006e, #8338ec, #3a86ff);
+      border-radius: 16px; display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 2rem; font-size: 2.2rem;
+      box-shadow: 0 12px 25px rgba(255, 0, 110, 0.3);
+    }
+    .benefit-card h3 {
+      font-size: 1.4rem; margin-bottom: 1.5rem; color: #06ffa5; font-weight: 600;
+    }
+    .benefit-card p {
+      color: #f1f5f9; line-height: 1.6; font-size: 1rem;
+    }
+    .business-lines {
+      padding: 100px 2rem; background: rgba(0, 0, 0, 0.3); position: relative;
+    }
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem; margin-top: 4rem;
+    }
+    .business-card {
+      background: rgba(0, 0, 0, 0.7); border-radius: 20px; overflow: hidden;
+      backdrop-filter: blur(20px); border: 1px solid rgba(255, 0, 110, 0.2);
+      transition: all 0.2s ease; position: relative; cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+    .business-card:hover {
+      border-color: rgba(255, 0, 110, 0.4); box-shadow: 0 10px 25px rgba(255, 0, 110, 0.1);
+    }
+    .business-header { height: 160px; position: relative;
+      display: flex; align-items: center;
+      justify-content: center; overflow: hidden;}
+    .health {
+      background: linear-gradient(135deg, #00f5ff, #00d4aa, #7c4dff);
+      background-size: 200% 200%;
+      animation: gradientShift 12s ease infinite;
+    }
+    .media {
+      background: linear-gradient(135deg, #ff6b35, #f7931e, #ffbe0b);
+      background-size: 200% 200%;
+      animation: gradientShift 14s ease infinite;
+    }
+    .hitech {
+      background: linear-gradient(135deg, #4facfe, #00f2fe, #43e97b);
+      background-size: 200% 200%;
+      animation: gradientShift 10s ease infinite;
+    }
+    .insurance {
+      background: linear-gradient(135deg, #a8edea, #fed6e3, #d299c2);
+      background-size: 200% 200%;
+      animation: gradientShift 16s ease infinite;
+    }
+    .business-title {
+      background: rgba(0, 0, 0, 0.85); color: white;
+      padding: 1rem 1.5rem; border-radius: 12px;
+      font-weight: 600; font-size: 1.1rem;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+    }
+    .business-content { padding: 2rem; text-align: center; }
+    .leadership-tag {
+      background: linear-gradient(135deg, #ff006e, #8338ec); color: white;
+      padding: 0.8rem 1.5rem; border-radius: 12px;
+      font-size: 0.95rem; font-weight: 500; box-shadow: 0 8px 20px rgba(255, 0, 110, 0.3);
+      transition: all 0.3s ease; cursor: pointer; margin-bottom: 1rem; user-select: none;
+    }
+    .team-members {
+      display: none; margin-top: 1.5rem; padding: 1.5rem;
+      background: rgba(0, 0, 0, 0.6); border-radius: 15px;
+      border: 1px solid rgba(255, 0, 110, 0.2);
+    }
+    .team-members.show { display: block; animation: slideDown 0.5s ease; }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .team-section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1rem; color: #06ffa5;
+      text-align: left;
+    }
+    .team-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;
+    }
+    .team-member {
+      background: rgba(255, 255, 255, 0.1); padding: 0.8rem;
+      border-radius: 10px; font-size: 0.9rem;
+      font-weight: 500; border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.2s ease; cursor: pointer; user-select: none;
+    }
+    .team-member:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 0, 110, 0.3);
+    }
+    .pm-badge {
+      background: linear-gradient(45deg, #3a86ff, #06ffa5); color: white;
+      padding: 0.2rem 0.5rem; border-radius: 12px;
+      font-size: 0.7rem; margin-right: 0.5rem; font-weight: 600; user-select: none;
+    }
+    .dm-badge {
+      background: linear-gradient(45deg, #ff006e, #ffbe0b); color: white;
+      padding: 0.2rem 0.5rem; border-radius: 12px;
+      font-size: 0.7rem; margin-right: 0.5rem; font-weight: 600; user-select: none;
+    }
+    .expand-btn {
+      background: none; border: none; color: white;
+      font-size: 1.5rem; cursor: pointer; transition: transform 0.3s ease;
+      margin-left: 0.5rem; user-select: none;
+    }
+    .expand-btn.rotated { transform: rotate(180deg); }
+    .customer-list {
+      display: none; margin-top: 0.5rem; padding: 0.8rem;
+      background: rgba(0, 0, 0, 0.5); border-radius: 8px;
+      border-left: 3px solid #06ffa5;
+    }
+    .customer-list.show { display: block; animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .customer-item {
+      font-size: 0.8rem; color: #f8fafc; margin-bottom: 0.3rem;
+      padding: 0.3rem 0.5rem; background: rgba(255, 255, 255, 0.05);
+      border-radius: 5px; border-left: 2px solid rgba(6, 255, 165, 0.5);
+    }
+    .dm-expand-btn {
+      background: none; border: none; color: #06ffa5;
+      font-size: 0.8rem; cursor: pointer; float: right;
+      transition: transform 0.3s ease; user-select: none;
+    }
+    .dm-expand-btn.rotated { transform: rotate(180deg); }
+    .footer {
+      background: rgba(0, 0, 0, 0.9); padding: 4rem 2rem 2rem;
+      text-align: center; border-top: 2px solid rgba(255, 0, 110, 0.3);
+    }
+    .footer-content { max-width: 1200px; margin: 0 auto; }
+    .footer-links {
+      display: flex; justify-content: center; gap: 3rem;
+      margin-bottom: 2rem; flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: #f1f5f9; text-decoration: none;
+      transition: all 0.3s ease; font-weight: 600;
+    }
+    .footer-links a:hover {
+      color: #ff006e; transform: translateY(-2px);
+    }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 3rem; }
+      .nav-links { display: none; }
+      .benefits-grid, .business-grid { grid-template-columns: 1fr; }
+      .section-title { font-size: 2.5rem; }
+      .team-grid { grid-template-columns: 1fr; }
+    }
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.8s ease;
+    }
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* — NEW: AVP Harsh card — */
+    .avp-card { text-align: center; margin: 4rem 0; }
+    .avp-photo {
+      max-width: 460px; border-radius: 16px;
+      border: 2px solid rgba(255,255,255,0.2);
+      margin-bottom: 1rem;
+    }
+    .avp-name { font-size: 1.4rem; margin-bottom: 0.5rem; color: #06ffa5; }
+    .avp-message {
+      font-style: italic; color: #f1f5f9; line-height: 1.6;
+      max-width: 800px; margin: 0 auto; padding: 1.5rem;
+      background: rgba(0,0,0,0.6); border-radius: 12px;
+      border: 1px solid rgba(255,0,110,0.2);
+    }
+    .space-leaders-card { text-align: center; margin: 4rem 0; }
+    .team-section-subtitle {
+      font-size: 1.6rem; color: #ff006e; margin-bottom: 2rem;
+      text-align: center; width: 100%;
+      display: block;
+    }
+    .space-leaders-photo {
+  max-width: 400px; height: auto; border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  width: 100%;
+}
+
+.service-delivery-photo {
+  max-width: 650px; height: auto; border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  width: 100%;
+}
+
+.program-mgmt-photo {
+  max-width: 600px; height: auto; border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  width: 100%;
+}
+    #team .business-lines {
+      padding: 0; background: transparent; margin-top: 3rem;
+    }
+    #team .team-section-subtitle { margin-bottom: 2rem; }
+    
+    /* L1 Support Modal Styles */
+    .l1-modal {
+      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.9); z-index: 2000; overflow-y: auto;
+      backdrop-filter: blur(20px);
+    }
+    .l1-modal.show { display: flex; align-items: center; justify-content: center; }
+    .l1-modal-content {
+      background: rgba(10, 10, 10, 0.95); border-radius: 20px;
+      max-width: 95vw; max-height: 90vh; overflow-y: auto;
+      border: 1px solid rgba(255, 0, 110, 0.3);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+      position: relative; margin: 2rem;
+    }
+    .l1-modal-header {
+      background: linear-gradient(135deg, #ff006e, #8338ec, #3a86ff);
+      padding: 2rem; text-align: center; border-radius: 20px 20px 0 0;
+      position: relative;
+    }
+    .l1-modal-header h2 {
+      font-size: 2.5rem; margin: 0; color: white; font-weight: 800;
+    }
+    .l1-modal-header p {
+      margin: 0.5rem 0 0; color: rgba(255, 255, 255, 0.9);
+      font-size: 1.1rem;
+    }
+    .l1-close-btn {
+      position: absolute; top: 1rem; right: 1.5rem;
+      background: rgba(255, 255, 255, 0.2); border: none;
+      color: white; font-size: 1.5rem; width: 40px; height: 40px;
+      border-radius: 50%; cursor: pointer; transition: all 0.3s ease;
+    }
+    .l1-close-btn:hover {
+      background: rgba(255, 0, 110, 0.8); transform: scale(1.1);
+    }
+    .l1-modal-body { padding: 2rem; }
+    .l1-tabs {
+      display: flex; gap: 1rem; margin-bottom: 2rem;
+      justify-content: center; flex-wrap: wrap;
+    }
+    .l1-tab-btn {
+      background: rgba(255, 255, 255, 0.1); border: none;
+      padding: 1rem 2rem; border-radius: 12px; color: white;
+      cursor: pointer; transition: all 0.3s ease; font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .l1-tab-btn.active {
+      background: linear-gradient(135deg, #ff006e, #8338ec);
+      border-color: rgba(255, 0, 110, 0.5);
+      box-shadow: 0 8px 20px rgba(255, 0, 110, 0.3);
+    }
+    .l1-tab-btn:hover:not(.active) {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 0, 110, 0.3);
+    }
+    .l1-tab-content { display: none; }
+    .l1-tab-content.active { display: block; }
+    .l1-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 1.5rem; margin-top: 1rem;
+    }
+    .l1-card {
+      background: rgba(0, 0, 0, 0.6); border-radius: 15px; padding: 1.5rem;
+      border: 1px solid rgba(255, 0, 110, 0.2); transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    .l1-card:hover {
+      border-color: rgba(255, 0, 110, 0.4);
+      box-shadow: 0 10px 25px rgba(255, 0, 110, 0.1);
+      transform: translateY(-2px);
+    }
+    .l1-card-header {
+      display: flex; align-items: center; margin-bottom: 1rem;
+    }
+    .l1-card-icon {
+      width: 40px; height: 40px; border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      margin-right: 1rem; font-size: 1.2rem;
+      background: linear-gradient(135deg, #3a86ff, #06ffa5);
+    }
+    .l1-card-title {
+      font-size: 1.1rem; font-weight: 600; color: #06ffa5; margin: 0;
+    }
+    .l1-card-content {
+      color: #f1f5f9; line-height: 1.5;
+    }
+    .l1-card-content strong {
+      color: #60a5fa; font-weight: 600;
+    }
+    .l1-stats {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem; margin-bottom: 2rem;
+    }
+    .l1-stat-card {
+      background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(58, 134, 255, 0.1));
+      border-radius: 12px; padding: 1.5rem; text-align: center;
+      border: 1px solid rgba(255, 0, 110, 0.2);
+    }
+    .l1-stat-number {
+      font-size: 2.5rem; font-weight: 800; color: #06ffa5; margin-bottom: 0.5rem;
+    }
+    .l1-stat-label {
+      color: #f1f5f9; font-size: 0.9rem; text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 768px) {
+      .l1-modal-content { margin: 1rem; max-width: calc(100vw - 2rem); }
+      .l1-modal-header h2 { font-size: 2rem; }
+      .l1-grid { grid-template-columns: 1fr; }
+      .l1-tabs { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="animated-bg"></div>
+  <div class="particles" id="particles"></div>
+  <nav class="navbar" id="navbar">
+    <div class="nav-content">
+      <div class="logo">
+        <img src="SPACE-LOGO.webp" alt="SPACE Logo" style="height: 75px; width: auto;">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" class="l1-support-btn" onclick="openL1Modal(); return false;">L1 Support</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>SPACE</h1>
+      <div class="hero-subtitle">Inspire | Innovate | Illuminate</div>
+      <p class="hero-description">
+        Scaled Platform Advanced Cognitive Experience - A premier framework meticulously crafted to deliver unparalleled,
+        comprehensive end-to-end infrastructure support. We provide exemplary standard services while seamlessly accommodating
+        shared, hybrid, and dedicated models.
+      </p>
+    </div>
+  </section>
+  <section class="section" id="team">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">✨ Meet Our Dream Team</h2>
+      <!-- AVP Harsh -->
+      <div class="avp-card animate-on-scroll">
+        <img src="Harsh.png" alt="Harsh Gautam Singh, AVP" class="avp-photo" />
+        <h3 class="avp-name">Harsh Gautam Singh, AVP</h3>
+        <blockquote class="avp-message">
+          "The world changes when we change our perspective."<br/>
+          SPACE is not just shared delivery. It's an Enabler for all our mid-size clients who are looking for
+          cost-effective and platform-driven operations. We have created our own niche by adding
+          client-centric customization to standard Share Delivery Operations, and amplified our value by improving
+          the tech-currency of our CloudXperienz platforms. Our vision is to scale current SPACE Operations to
+          Nextgen Multi-Stack Ops.
+        </blockquote>
+      </div>
+      <!-- SPACE Leaders -->
+<div class="space-leaders-card animate-on-scroll">
+  <h3 class="team-section-subtitle">🚀 SPACE Core Team</h3>
+  <img src="Space_Leaders.png" alt="Service Delivery Leaders" class="service-delivery-photo" />
+</div>
+
+<!-- Service Delivery Leaders -->
+<div class="space-leaders-card animate-on-scroll">
+  <h3 class="team-section-subtitle">🎯 Service Delivery Leaders</h3>
+  <img src="Service Delivery Leaders.png" alt="Service Delivery Leaders" class="space-leaders-photo" />
+</div>
+
+<!-- Program Management Leaders -->
+<div class="space-leaders-card animate-on-scroll">
+  <h3 class="team-section-subtitle">📋 Program Management Leaders</h3>
+  <img src="Program Management Leaders.png" alt="Program Management Leaders" class="program-mgmt-photo" />
+</div>
+      <!-- Business Verticals inside Team -->
+      <div class="business-lines">
+        <h3 class="team-section-subtitle">🌈 Business Verticals & Leadership</h3>
+        <div class="business-grid animate-on-scroll">
+          <!-- Health, CME & HiTech -->
+          <div class="business-card">
+            <div class="business-header health">
+              <div class="business-title">🏥 Health, CME & HiTech</div>
+            </div>
+            <div class="business-content">
+              <div class="leadership-tag" onclick="toggleTeamMembers('health')">
+                Customer & Leadership Excellence Team
+                <button class="expand-btn" id="health-btn">▼</button>
+              </div>
+              <div class="team-members" id="health-team">
+                <div class="team-section-title">👤 Delivery Manager</div>
+                <div class="team-grid" style="grid-template-columns: 1fr;">
+                  <div class="team-member"><span class="dm-badge">DM</span>Randeep Pattnaik</div>
+                </div>
+                <div class="team-section-title">🎯 Project Managers & Their Customers</div>
+                <div class="team-grid">
+                  <div class="team-member">
+                    <div onclick="toggleCustomers('siva-health')">
+                      <span class="pm-badge">PM</span>Siva
+                      <button class="dm-expand-btn" id="siva-health-btn">▼</button>
+                    </div>
+                    <div class="customer-list" id="siva-health-customers">
+                      <div class="customer-item">🏥 Convo Communications LLC</div>
+                      <div class="customer-item">🏥 Edgewood Partners Insurance Center</div>
+                      <div class="customer-item">🏥 Warner Media LLC</div>
+                    </div>
+                  </div>
+                  <div class="team-member">
+                    <div onclick="toggleCustomers('deepak')">
+                      <span class="pm-badge">PM</span>Deepak Chandel
+                      <button class="dm-expand-btn" id="deepak-btn">▼</button>
+                    </div>
+                    <div class="customer-list" id="deepak-customers">
+                      <div class="customer-item">🏥 Telia Sverige AB</div>
+                      <div class="customer-item">🏥 Harvard Business School</div>
+                      <div class="customer-item">🏥 F-Secure Corporation</div>
+                    </div>
+                  </div>
+                  <div class="team-member">
+                    <div onclick="toggleCustomers('roopesh')">
+                      <span class="pm-badge">PM</span>Roopesh KR
+                      <button class="dm-expand-btn" id="roopesh-btn">▼</button>
+                    </div>
+                    <div class="customer-list" id="roopesh-customers">
+                      <div class="customer-item">🏥 F-Secure Corporation</div>
+                      <div class="customer-item">🏥 Informa UK Limited</div>
+                      <div class="customer-item">🏥 F-Secure Corporation (IRT)</div>
+                    </div>
+                  </div>
+                  <div class="team-member">
+                    <div onclick="toggleCustomers('santosa')">
+                      <span class="pm-badge">PM</span>Santosa
+                      <button class="dm-expand-btn" id="santosa-btn">▼</button>
+                    </div>
+                    <div class="customer-list" id="santosa-customers">
+                      <div class="customer-item">🏥 Association of American Medical Col</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- BFSI -->
+          <div class="business-card">
+            <div class="business-header hitech">
+              <div class="business-title">🏦 BFSI</div>
+            </div>
+            <div class="business-content">
+              <div class="leadership-tag" onclick="toggleTeamMembers('hitech')">
+                Customer & Leadership Excellence Team
+                <button class="expand-btn" id="hitech-btn">▼</button>
+              </div>
+              <div class="team-members" id="hitech-team">
+                <div class="team-section-title">👤 Delivery Manager</div>
+                <div class="team-grid" style="grid-template-columns: 1fr;">
+                  <div class="team-member"><span class="dm-badge">DM</span>Mohan Narendra</div>
+                </div>
+                <div class="team-section-title">🎯 Project Managers & Their Customers</div>
+                <div class="team-grid">
+                  <div class="team-member">
+                    <div onclick="toggleCustomers('suresh')">
+                      <span class="pm-badge">PM</span>Suresh
+                      <button class="dm-expand-btn" id="suresh-btn">▼</button>
+                    </div>
+                    <div class="customer-list" id="suresh-customers">
+                      <div class="customer-item">🏢 Endurance Services Limited</div>
+                      <div class="customer-item">🏢 The Andrew W. Mellon Foundation</div>
+                      <div class="customer-item">🏢 The Ford Foundation</div>
+                      <div class="customer-item">🏢 Newbury Corp Group Inc</div>
+                    </div>
+                  </div>
+                  <div class="team-member">
+                    <div onclick="toggleCustomers('siva-bfsi')">
+                      <span class="pm-badge">PM</span>Siva
+                      <button class="dm-expand-btn" id="siva-bfsi-btn">▼</button>
+                    </div>
+                    <div class="customer-list" id="siva-bfsi-customers">
+                      <div class="customer-item">🏢 Harris Associates</div>
+                      <div class="customer-item">🏢 PineBridge Investments Holdings</div>
+                      <div class="customer-item">🏢 MacArthur Foundation</div>
+                    </div>
+                  </div>
+                  <div class="team-member">
+                    <div onclick="toggleCustomers('jaideep')">
+                      <span class="pm-badge">PM</span>Jaideep
+                      <button class="dm-expand-btn" id="jaideep-btn">▼</button>
+                    </div>
+                    <div class="customer-list" id="jaideep-customers">
+                      <div class="customer-item">🏢 PineBridge Investments Holdings</div>
+                      <div class="customer-item">🏢 MacArthur Foundation</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- TTH & Lifescience -->
+          <div class="business-card">
+            <div class="business-header insurance">
+              <div class="business-title">🌱 TTH & Lifescience</div>
+            </div>
+            <div class="business-content">
+              <div class="leadership-tag" onclick="toggleTeamMembers('insurance')">
+                Customer & Leadership Excellence Team
+                <button class="expand-btn" id="insurance-btn">▼</button>
+              </div>
+              <div class="team-members" id="insurance-team">
+                <div class="team-section-title">👤 Delivery Manager</div>
+                <div class="team-grid" style="grid-template-columns: 1fr;">
+                  <div class="team-member"><span class="dm-badge">DM</span>Anoop Chandar</div>
+                </div>
+                <div class="team-section-title">🎯 Project Managers & Their Customers</div>
+                <div class="team-grid">
+                  <div class="team-member">
+                    <div onclick="toggleCustomers('girish')">
+                      <span class="pm-badge">PM</span>Girish
+                      <button class="dm-expand-btn" id="girish-btn">▼</button>
+                    </div>
+                    <div class="customer-list" id="girish-customers">
+                      <div class="customer-item">🌱 Veolia Environnement SA</div>
+                      <div class="customer-item">🌱 Compass Group USA Inc.</div>
+                      <div class="customer-item">🌱 Avis Budget Car Rental, LLC</div>
+                      <div class="customer-item">🌱 Lufthansa AirPlus Servicekarten Gmb</div>
+                      <div class="customer-item">🌱 Molnlycke Health Care AB</div>
+                      <div class="customer-item">🌱 Soho House UK Limited</div>
+                      <div class="customer-item">🌱 FMG Shared Services</div>
+                      <div class="customer-item">🌱 Veolia Umweltservice GmbH</div>
+                      <div class="customer-item">🌱 Yokogawa India Limited</div>
+                    </div>
+                  </div>
+                  <div class="team-member">
+                    <div onclick="toggleCustomers('baranidharan')">
+                      <span class="pm-badge">PM</span>Baranidharan G
+                      <button class="dm-expand-btn" id="baranidharan-btn">▼</button>
+                    </div>
+                    <div class="customer-list" id="baranidharan-customers">
+                      <div class="customer-item">🌱 MARRIOTT INTERNATIONAL, Inc.</div>
+                      <div class="customer-item">🌱 SSP Financing UK Limited</div>
+                    </div>
+                  </div>
+                  <div class="team-member">
+                    <div onclick="toggleCustomers('preeti')">
+                      <span class="pm-badge">PM</span>Preeti
+                      <button class="dm-expand-btn" id="preeti-btn">▼</button>
+                    </div>
+                    <div class="customer-list" id="preeti-customers">
+                      <div class="customer-item">🌱 Veolia Umweltservice GmbH</div>
+                    </div>
+                  </div>
+                  <div class="team-member">
+                    <div onclick="toggleCustomers('yoganand')">
+                      <span class="pm-badge">PM</span>Yoganand Laddagiri
+                      <button class="dm-expand-btn" id="yoganand-btn">▼</button>
+                    </div>
+                    <div class="customer-list" id="yoganand-customers">
+                      <div class="customer-item">🌱 Millennium & Copthorne</div>
+                      <div class="customer-item">🌱 Milleneum Hotels & Resorts international ltd</div>
+                      <div class="customer-item">🌱 SSP Financing UK Limited</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- RCG, EY & MFG -->
+          <div class="business-card">
+            <div class="business-header media">
+              <div class="business-title">🏭 RCG, EY & MFG</div>
+            </div>
+            <div class="business-content">
+              <div class="leadership-tag" onclick="toggleTeamMembers('media')">
+                Customer & Leadership Excellence Team
+                <button class="expand-btn" id="media-btn">▼</button>
+              </div>
+              <div class="team-members" id="media-team">
+                <div class="team-section-title">👤 Delivery Manager</div>
+                <div class="team-grid" style="grid-template-columns: 1fr;">
+                  <div class="team-member"><span class="dm-badge">DM</span>RaviKiran MS</div>
+                </div>
+                <div class="team-section-title">🎯 Project Managers & Their Customers</div>
+                <div class="team-grid">
+                  <div class="team-member">
+                    <div onclick="toggleCustomers('shripad')">
+                      <span class="pm-badge">PM</span>Shripad
+                      <button class="dm-expand-btn" id="shripad-btn">▼</button>
+                    </div>
+                    <div class="customer-list" id="shripad-customers">
+                      <div class="customer-item">🏭 WhiteCap</div>
+                      <div class="customer-item">🏭 MSC Industrial Supply Co.</div>
+                      <div class="customer-item">🏭 WK Kellogg Foundation</div>
+                    </div>
+                  </div>
+                  <div class="team-member">
+                    <div onclick="toggleCustomers('prakash')">
+                      <span class="pm-badge">PM</span>Prakash ChandraSati
+                      <button class="dm-expand-btn" id="prakash-btn">▼</button>
+                    </div>
+                    <div class="customer-list" id="prakash-customers">
+                      <div class="customer-item">🏭 PBF Holding company LLC</div>
+                      <div class="customer-item">🏭 7-Eleven Inc.</div>
+                      <div class="customer-item">🏭 BISSELL Homecare, Inc.</div>
+                      <div class="customer-item">🏭 TMS US PLANO TX</div>
+                      <div class="customer-item">🏭 Mondelez Global LLC</div>
+                      <div class="customer-item">🏭 Campbell Soup Company</div>
+                      <div class="customer-item">🏭 Infinite Electronics, LLC</div>
+                      <div class="customer-item">🏭 Infinite Electronics, LLC Hosting</div>
+                    </div>
+                  </div>
+                  <div class="team-member">
+                    <div onclick="toggleCustomers('chirag')">
+                      <span class="pm-badge">PM</span>Chirag Jayaram
+                      <button class="dm-expand-btn" id="chirag-btn">▼</button>
+                    </div>
+                    <div class="customer-list" id="chirag-customers">
+                      <div class="customer-item">🏭 Unilever Europe (UEIT)</div>
+                      <div class="customer-item">🏭 The Procter & Gamble US Business</div>
+                      <div class="customer-item">🏭 Unilever</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Why Choose SPACE? moved below Team -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">🔥 Why Choose SPACE?</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card animate-on-scroll">
+          <div class="benefit-icon">💎</div>
+          <h3>Reduced Cost of Ownership</h3>
+          <p>Revolutionary pricing models that maximize your ROI while delivering enterprise-grade value across all service tiers.</p>
+        </div>
+        <div class="benefit-card animate-on-scroll">
+          <div class="benefit-icon">⚡</div>
+          <h3>Platform Availability</h3>
+          <p>Cutting-edge tools and platforms tailored to your exact requirements, ensuring optimal resource allocation and peak performance.</p>
+        </div>
+        <div class="benefit-card animate-on-scroll">
+          <div class="benefit-icon">🎯</div>
+          <h3>Flexible Delivery Model</h3>
+          <p>Choose from shared, hybrid, and dedicated models - each expertly designed to match your unique business objectives.</p>
+        </div>
+        <div class="benefit-card animate-on-scroll">
+          <div class="benefit-icon">🏆</div>
+          <h3>Operational Excellence</h3>
+          <p>Industry-leading best practices with standardized metrics and real-time performance monitoring across all touchpoints.</p>
+        </div>
+        <div class="benefit-card animate-on-scroll">
+          <div class="benefit-icon">🚀</div>
+          <h3>Infinite Scalability</h3>
+          <p>Lightning-fast deployment with our expert talent pool and diverse skill sets for immediate project launches.</p>
+        </div>
+        <div class="benefit-card animate-on-scroll">
+          <div class="benefit-icon">🌐</div>
+          <h3>Global NOC Network</h3>
+          <p>4 dedicated Network Operations Centers providing instant onboarding, 24/7 monitoring, and worldwide coverage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer" id="contact">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Service</a>
+        <a href="#support">24/7 Support</a>
+        <a href="#careers">Join Our Team</a>
+        <a href="#contact">Get In Touch</a>
+      </div>
+      <p style="color: rgba(255, 255, 255, 0.7); font-size: 1.1rem; margin-top: 1rem;">
+        &copy; 2025 SPACE Platform. Transforming the future, one innovation at a time. ✨
+      </p>
+    </div>
+  </footer>
+  
+  <!-- L1 Support Modal -->
+  <div class="l1-modal" id="l1Modal">
+    <div class="l1-modal-content">
+      <div class="l1-modal-header">
+        <button class="l1-close-btn" onclick="closeL1Modal()">×</button>
+        <h2>📊 L1 Support Applications</h2>
+        <p>Infrastructure & Application Support Overview</p>
+      </div>
+      <div class="l1-modal-body">
+        <div class="l1-stats">
+          <div class="l1-stat-card">
+            <div class="l1-stat-number">12</div>
+            <div class="l1-stat-label">Active Customers</div>
+          </div>
+          <div class="l1-stat-card">
+            <div class="l1-stat-number">42</div>
+            <div class="l1-stat-label">Support Applications</div>
+          </div>
+          <div class="l1-stat-card">
+            <div class="l1-stat-number">24/7</div>
+            <div class="l1-stat-label">Monitoring</div>
+          </div>
+        </div>
+        
+        <div class="l1-tabs">
+          <button class="l1-tab-btn active" onclick="switchL1Tab('customers')">👥 Customer Portfolio</button>
+          <button class="l1-tab-btn" onclick="switchL1Tab('applications')">🛠️ Support Applications</button>
+        </div>
+        
+        <div class="l1-tab-content active" id="customers-tab">
+          <div class="l1-grid" id="customers-grid"></div>
+        </div>
+        
+        <div class="l1-tab-content" id="applications-tab">
+          <div class="l1-grid" id="applications-grid"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Create floating particles
+    function createParticles() {
+      const particlesContainer = document.getElementById('particles');
+      const particleCount = 50;
+  
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 6 + 's';
+        particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+        particlesContainer.appendChild(particle);
+      }
+    }
+    createParticles();
+  
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  
+    // Scroll animations
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -100px 0px' };
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, observerOptions);
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+  
+    // Toggle business team with expand/collapse
+    function toggleTeamMembers(vertical) {
+      const section = document.getElementById(`${vertical}-team`);
+      const btn = document.getElementById(`${vertical}-btn`);
+      if (!section || !btn) return;
+  
+      const isCurrentlyOpen = section.classList.contains('show');
+  
+      // Close all expanded sections
+      document.querySelectorAll('.team-members').forEach(s => s.classList.remove('show'));
+      document.querySelectorAll('.expand-btn').forEach(b => {
+        b.classList.remove('rotated');
+        b.textContent = '▼';
+      });
+  
+      if (!isCurrentlyOpen) {
+        // Expand the clicked section
+        section.classList.add('show');
+        btn.classList.add('rotated');
+        btn.textContent = '▲';
+      }
+    }
+  
+    // Toggle customers list
+    function toggleCustomers(pmId) {
+      const list = document.getElementById(`${pmId}-customers`);
+      const btn = document.getElementById(`${pmId}-btn`);
+      if (!list || !btn) return;
+  
+      const isCurrentlyOpen = list.classList.contains('show');
+  
+      // Close all customer lists
+      document.querySelectorAll('.customer-list').forEach(l => l.classList.remove('show'));
+      document.querySelectorAll('.dm-expand-btn').forEach(b => {
+        b.classList.remove('rotated');
+        b.textContent = '▼';
+      });
+  
+      if (!isCurrentlyOpen) {
+        // Show clicked customer list
+        list.classList.add('show');
+        btn.classList.add('rotated');
+        btn.textContent = '▲';
+      }
+    }
+    
+    // L1 Support Data
+    const l1Data = {
+      customers: [
+        { customer: "HBS", infrastructure: "HBS Online Portal", applicationType: "Online Learning Portal", scopeOfSupport: "Service Desk Support" },
+        { customer: "F-Secure", infrastructure: "F-Secure", applicationType: "Mobile Security App", scopeOfSupport: "End User Support" },
+        { customer: "7Eleven", infrastructure: "Azure Databricks", applicationType: "Batch Processing", scopeOfSupport: "Batch Monitoring" },
+        { customer: "Homesite", infrastructure: "Workforce Management System", applicationType: "Bot Scheduler", scopeOfSupport: "Bot Monitoring" },
+        { customer: "Avis Budget Group", infrastructure: "Avis Car Rental application (website) and their partners reservation group", applicationType: "Car Rental Booking", scopeOfSupport: "Infra and App performance Monitoring" },
+        { customer: "Mondelez", infrastructure: "Mondelez Application (website) monitoring", applicationType: "Food & Snacks selling online portal", scopeOfSupport: "Application Performance monitoring" },
+        { customer: "Cadburys", infrastructure: "Cadburys Application (website) monitoring", applicationType: "Snacks selling Online portal", scopeOfSupport: "Application Performance monitoring" },
+        { customer: "AkzoNobel", infrastructure: "Jira", applicationType: "Tracking /Project Management Application", scopeOfSupport: "User Administration ( User creation, Dashboard creation, Access Management etc )" },
+        { customer: "PineBridge", infrastructure: "Tidal", applicationType: "Job Scheduler and Monitoring", scopeOfSupport: "Batch Job Monitoring & Administration" },
+        { customer: "Harris", infrastructure: "Active Batch", applicationType: "Job Monitoring and Operator", scopeOfSupport: "Batch Monitoring" },
+        { customer: "F-Secure", infrastructure: "NOC Operations", applicationType: "Infra Alerts & Incident Monitoring", scopeOfSupport: "Monitoring" },
+        { customer: "FCCI", infrastructure: "", applicationType: "", scopeOfSupport: "User Account Administration, Code Deployment" }
+      ],
+      applications: [
+        { application: "Slack", usage: "Collaboration" },
+        { application: "Confluence", usage: "Documentation" },
+        { application: "Diplomatic", usage: "Certificate Status /Generation" },
+        { application: "Fishbowl", usage: "Course Simulation Portal" },
+        { application: "Service Cloud", usage: "ITSM" },
+        { application: "Prism", usage: "User Administration Platform" },
+        { application: "Cashier", usage: "Payment Validation Platform" },
+        { application: "Google Play Console", usage: "Payment Validation Platform" },
+        { application: "1Password", usage: "Password Vault" },
+        { application: "SNOW", usage: "ITSM" },
+        { application: "Microsoft Azure", usage: "Monitoring" },
+        { application: "Databricks", usage: "Monitoring" },
+        { application: "Dynatrace", usage: "Monitoring of Application" },
+        { application: "Grafana", usage: "Dashboard Monitoring" },
+        { application: "Google Analytics", usage: "KPI Report Generation" },
+        { application: "JIRA", usage: "Change Schedule Validation" },
+        { application: "AWS", usage: "Website traffic monitoring and switching of traffic between DC" },
+        { application: "ServiceNow", usage: "ITSM" },
+        { application: "Akamai", usage: "Fraud Activities Monitoring (Cyber security)" },
+        { application: "OneTrust", usage: "Website Monitoring" },
+        { application: "PingDom", usage: "Website Monitoring" },
+        { application: "NewRelic", usage: "Application Performance Monitoring" },
+        { application: "Splunk", usage: "Log Monitoring" },
+        { application: "VMware", usage: "VM Monitoring" },
+        { application: "Netscaler", usage: "Load Balancer Monitoring" },
+        { application: "Cloudflare", usage: "Web traffic Monitoring" },
+        { application: "Active Directory", usage: "User Account Creation" },
+        { application: "Tableau", usage: "Business Intelligence Report Generation" },
+        { application: "Power BI", usage: "Business Intelligence" },
+        { application: "BMC Remedy", usage: "ITSM" },
+        { application: "IBM Maximo", usage: "Asset Management" },
+        { application: "Oracle", usage: "Database Administration" },
+        { application: "SQL Server", usage: "Database Monitoring" },
+        { application: "Jira", usage: "ITSM - Ticket Monitoring" },
+        { application: "Cloudbees", usage: "Alert Monitoring & Resolution" },
+        { application: "EasyVista", usage: "ITSM" },
+        { application: "Citrix", usage: "Remote Session" },
+        { application: "Citrix Director", usage: "Remote Session" }
+      ]
+    };
+    
+    // L1 Support Modal Functions
+    function openL1Modal() {
+      const modal = document.getElementById('l1Modal');
+      modal.classList.add('show');
+      document.body.style.overflow = 'hidden';
+      loadL1Data();
+    }
+    
+    function closeL1Modal() {
+      const modal = document.getElementById('l1Modal');
+      modal.classList.remove('show');
+      document.body.style.overflow = 'auto';
+    }
+    
+    function switchL1Tab(tabName) {
+      // Update tab buttons
+      document.querySelectorAll('.l1-tab-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      // Update tab content
+      document.querySelectorAll('.l1-tab-content').forEach(content => content.classList.remove('active'));
+      document.getElementById(tabName + '-tab').classList.add('active');
+    }
+    
+    function loadL1Data() {
+      // Load customers
+      const customersGrid = document.getElementById('customers-grid');
+      customersGrid.innerHTML = l1Data.customers.map(customer => `
+        <div class="l1-card">
+          <div class="l1-card-header">
+            <div class="l1-card-icon">🏢</div>
+            <h3 class="l1-card-title">${customer.customer}</h3>
+          </div>
+          <div class="l1-card-content">
+            ${customer.infrastructure ? `<p><strong>Infrastructure:</strong> ${customer.infrastructure}</p>` : ''}
+            ${customer.applicationType ? `<p><strong>Application Type:</strong> ${customer.applicationType}</p>` : ''}
+            <p><strong>Support Scope:</strong> ${customer.scopeOfSupport}</p>
+          </div>
+        </div>
+      `).join('');
+      
+      // Load applications
+      const applicationsGrid = document.getElementById('applications-grid');
+      applicationsGrid.innerHTML = l1Data.applications.map(app => `
+        <div class="l1-card">
+          <div class="l1-card-header">
+            <div class="l1-card-icon">🛠️</div>
+            <h3 class="l1-card-title">${app.application}</h3>
+          </div>
+          <div class="l1-card-content">
+            <p><strong>Usage:</strong> ${app.usage}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+    
+    // Close modal when clicking outside
+    document.addEventListener('click', function(event) {
+      const modal = document.getElementById('l1Modal');
+      if (event.target === modal) {
+        closeL1Modal();
+      }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeL1Modal();
+      }
+    });
+    
+    // Expose functions globally
+    window.toggleTeamMembers = toggleTeamMembers;
+    window.toggleCustomers = toggleCustomers;
+    window.openL1Modal = openL1Modal;
+    window.closeL1Modal = closeL1Modal;
+    window.switchL1Tab = switchL1Tab;
+  </script>
+  
+</body>
+</html>
